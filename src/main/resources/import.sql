@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS Employees (id int auto_increment , name varchar(255), department int, address varchar(255), phone varchar(255), salary bigint, primary key(id), foreign key (department) references public.department(dept_id));
+CREATE TABLE IF NOT EXISTS Department (dept_id int auto_increment , name varchar(255), dept_code varchar(255), primary key(dept_id));
+INSERT INTO Department (name, dept_code) VALUES('Account', '66');
+INSERT INTO Department (name, dept_code) VALUES('Computer', '104');
+INSERT INTO Department (name, dept_code) VALUES('Purchase', '802');
+INSERT INTO Department (name, dept_code) VALUES('Production', '484');
+INSERT INTO Department (name, dept_code) VALUES('Quality', '640');
+INSERT INTO Department (name, dept_code) VALUES('Sales', '756');
+INSERT INTO Department (name, dept_code) VALUES('Stock', '578');
+INSERT INTO Employees (name, department, address, phone, salary) VALUES('Ramesh', '1', 'Hyderabad, India', '124458800', '1132929388');
+INSERT INTO Employees (name, department, address, phone, salary) VALUES('Suresh', '2', 'Bangalore, India', '123966111', '3368970189');
+INSERT INTO Employees (name, department, address, phone, salary) VALUES('Parag', '3', 'Mumbai, India', '126815300', '419234595030');
